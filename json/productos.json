@@ -1,0 +1,58 @@
+[
+  {
+    "id": 110,
+    "nombre": "Rosa Barbie",
+    "precio": 2500,
+    "gramaje": 10,
+    "imagen": "rosababy.webp"
+  },
+  {
+    "id": 240,
+    "nombre": "Violeta",
+    "precio": 2500,
+    "gramaje": 40,
+    "imagen": "violeta402.webp"
+  },
+  {
+    "id": 340,
+    "nombre": "Rojo ",
+    "precio": 2500,
+    "gramaje": 40,
+    "imagen": "rojo40.webp"
+  },
+  {
+    "id": 480,
+    "nombre": "Verde Esmeralda",
+    "precio": 2500,
+    "gramaje": 80,
+    "imagen": "verde80.webp"
+  },
+  {
+    "id": 510,
+    "nombre": "Azul",
+    "precio": 2500,
+    "gramaje": 10,
+    "imagen": "azul10.webp"
+  },
+  {
+    "id": 620,
+    "nombre": "Turquesa",
+    "precio": 2500,
+    "gramaje": 20,
+    "imagen": "turquesa20.webp"
+  },
+  {
+    "id": 740,
+    "nombre": "Plateado Hológrafico",
+    "precio": 3000,
+    "gramaje": 40,
+    "imagen": "plateadoH.webp"
+  },
+  {
+    "id": 860,
+    "nombre": "Dorado",
+    "precio": 3000,
+    "gramaje": 60,
+    "imagen": "dorado60.webp"
+  }
+]
