@@ -16,7 +16,8 @@ class gemas {
     this.forma = forma;
     this.imagen = imagen;
   }
-} // Clase para que simula la base de datos del e-commerce, acá van a estar
+}
+// Clase para que simula la base de datos del e-commerce, acá van a estar
 // todos los productos de nuestro catálogo
 class BaseDeDatos {
   constructor() {
@@ -182,7 +183,7 @@ const botonComprar = document.querySelector("#botonComprar");
 
 // Instaciamos la clase Carrito
 const carrito = new Carrito();
-console.log("hola");
+
 // Mostramos el catálogo de la base de datos apenas carga la página
 cargarProductos(bd.traerStock());
 
