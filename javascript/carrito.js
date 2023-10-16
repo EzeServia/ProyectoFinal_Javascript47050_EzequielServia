@@ -143,6 +143,11 @@ class Carrito {
       this.total += producto.precio * producto.cantidad;
       this.cantidadProductos += producto.cantidad;
     }
+    if (this.cantidadProductos > 0) {
+      botonComprar.style.display = "block";
+    } else {
+      botonComprar.style.display = "none";
+    }
 
     // Como no se cuantos productos tengo en el carrito, debo
     // asignarle los eventos de forma dinámica a cada uno
