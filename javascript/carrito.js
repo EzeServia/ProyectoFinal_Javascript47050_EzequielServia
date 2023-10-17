@@ -110,7 +110,13 @@ class Carrito {
     // Muestro los productos en el HTML
     this.listar();
   }
-
+  vaciarCarrito() {
+    this.total = 0;
+    this.cantidadProductos = 0;
+    this.carrito = [];
+    localStorage.setItem("carrito", JSON.stringify(this.carrito));
+    this.listar();
+  }
   // Renderiza todos los productos en el HTML
   listar() {
     // Reiniciamos variables
@@ -180,6 +186,7 @@ const divCarrito = document.querySelector("#carrito");
 const inputBuscar = document.querySelector("#inputBuscar");
 const botonCarrito = document.querySelector("section h2");
 const botonComprar = document.querySelector("#botonComprar");
+const botonVaciar = document.querySelector("#BotonVaciarCarrito");
 
 // Instaciamos la clase Carrito
 const carrito = new Carrito();
@@ -239,7 +246,7 @@ botonCarrito.addEventListener("click", (event) => {
 //boton comprar
 botonComprar.addEventListener("click", (event) => {
   event.preventDefault();
-
+  carrito.vaciarCarrito();
   Swal.fire({
     position: "top-start",
     icon: "success",
@@ -247,5 +254,9 @@ botonComprar.addEventListener("click", (event) => {
     showConfirmButton: false,
     timer: 1500,
   });
+});
+botonVaciar.addEventListener("click", (event) => {
+  event.preventDefault();
+  carrito.vaciarCarrito();
 });
 //boton para agregar cantidad de productos
