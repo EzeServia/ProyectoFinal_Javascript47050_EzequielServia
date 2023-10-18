@@ -227,6 +227,13 @@ function cargarProductos(productos) {
       const producto = bd.registroPorId(idProducto);
       // Llama al método agregar del carrito
       carrito.agregar(producto);
+      Toastify({
+        text: `Agregaste brillo ${producto.nombre} al carrito.`,
+        gravity: "bottom",
+        style: {
+          background: "linear-gradient(to right, #f72fe6, #5a04aa)",
+        },
+      }).showToast();
     });
   }
 }
