@@ -1,19 +1,19 @@
 // Clase "molde" para los productos de nuestra aplicación
 class Producto {
-  constructor(id, nombre, precio, gramaje, imagen) {
+  constructor(id, nombre, precio, descripcion, imagen) {
     this.id = id;
     this.nombre = nombre;
     this.precio = precio;
-    this.gramaje = gramaje;
+    this.descripcion = descripcion;
     this.imagen = imagen;
   }
 }
 class gemas {
-  constructor(id, nombre, precio, forma, imagen) {
+  constructor(id, nombre, precio, descripcion, imagen) {
     this.id = id;
     this.nombre = nombre;
     this.precio = precio;
-    this.forma = forma;
+    this.descripcion = descripcion;
     this.imagen = imagen;
   }
 }
@@ -33,8 +33,8 @@ class BaseDeDatos {
   }
 
   // Método que crea el objeto producto y lo almacena en el catálogo (array)
-  agregarStock(id, nombre, precio, gramaje, imagen) {
-    const producto = new Producto(id, nombre, precio, gramaje, imagen);
+  agregarStock(id, nombre, precio, descripcion, imagen) {
+    const producto = new Producto(id, nombre, precio, descripcion, imagen);
     this.productos.push(producto);
   }
 
@@ -53,6 +53,11 @@ class BaseDeDatos {
   registrosPorNombre(palabra) {
     return this.productos.filter((producto) =>
       producto.nombre.toLowerCase().includes(palabra.toLowerCase())
+    );
+  }
+  registrosPorDescripcion(descripcion) {
+    return this.productos.filter(
+      (producto) => producto.descripcion == descripcion
     );
   }
 }
@@ -187,9 +192,26 @@ const inputBuscar = document.querySelector("#inputBuscar");
 const botonCarrito = document.querySelector("section h2");
 const botonComprar = document.querySelector("#botonComprar");
 const botonVaciar = document.querySelector("#BotonVaciarCarrito");
+const botonFiltrar = document.querySelectorAll(".btnFiltrar");
 
 // Instaciamos la clase Carrito
 const carrito = new Carrito();
+
+botonFiltrar.forEach((boton) => {
+  boton.addEventListener("click", () => {
+    const descripcion = boton.dataset.descripcion;
+    const botonSeleccionado = document.querySelector(".botonSeleccionado");
+    botonSeleccionado.classList.remove("botonSeleccionado");
+    boton.classList.add("botonSeleccionado");
+    if (descripcion == "Todos") {
+      cargarProductos(bd.traerStock());
+    } else {
+      cargarProductos(bd.registrosPorDescripcion(descripcion));
+    }
+
+    const productos = bd.registrosPorDescripcion(boton.dataset.descripcion);
+  });
+});
 
 // Mostramos el catálogo de la base de datos apenas carga la página
 cargarProductos(bd.traerStock());
@@ -204,8 +226,8 @@ function cargarProductos(productos) {
     <img src="./imagenes/${producto.imagen}" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">${producto.nombre}</h5>
-      <p class="card-text">$${producto.precio}</p>
-      <p class="card-text">${producto.gramaje}MIC</p>
+      <p class="card-text">Efectivo: $${producto.precio}</p>
+      <p class="card-text">${producto.descripcion}</p>
       <a href="#" class="btnAgregar btn btn-primary" data-id="${producto.id}">Agregar al Carrito</a>
     </div>
   </div>

@@ -3,56 +3,112 @@
     "id": 110,
     "nombre": "Rosa Barbie",
     "precio": 2500,
-    "gramaje": 10,
+    "descripcion": "Brillos",
     "imagen": "rosababy.webp"
   },
   {
     "id": 240,
     "nombre": "Violeta",
     "precio": 2500,
-    "gramaje": 40,
+    "descripcion": "Brillos",
     "imagen": "violeta402.webp"
   },
   {
     "id": 340,
     "nombre": "Rojo ",
     "precio": 2500,
-    "gramaje": 40,
+    "descripcion": "Brillos",
     "imagen": "rojo40.webp"
   },
   {
     "id": 480,
     "nombre": "Verde Esmeralda",
     "precio": 2500,
-    "gramaje": 80,
+    "descripcion": "Brillos",
     "imagen": "verde80.webp"
   },
   {
     "id": 510,
     "nombre": "Azul",
     "precio": 2500,
-    "gramaje": 10,
+    "descripcion": "Brillos",
     "imagen": "azul10.webp"
   },
   {
     "id": 620,
     "nombre": "Turquesa",
     "precio": 2500,
-    "gramaje": 20,
+    "descripcion": "Brillos ",
     "imagen": "turquesa20.webp"
   },
   {
     "id": 740,
     "nombre": "Plateado Hológrafico",
     "precio": 3000,
-    "gramaje": 40,
+    "descripcion": "Brillos",
     "imagen": "plateadoH.webp"
   },
   {
     "id": 860,
     "nombre": "Dorado",
     "precio": 3000,
-    "gramaje": 60,
+    "descripcion": "Brillos ",
     "imagen": "dorado60.webp"
+  },
+  {
+    "id": 1,
+    "nombre": "Queen Perlas",
+    "precio": 7500,
+    "descripcion": "Gemas Faciales",
+    "imagen": "gemacara1.webp"
+  },
+  {
+    "id": 2,
+    "nombre": "Princess Corazón",
+    "precio": 7500,
+    "descripcion": "Gemas Faciales",
+    "imagen": "gemacara2.webp"
+  },
+  {
+    "id": 3,
+    "nombre": "Paris Nigth",
+    "precio": 7500,
+    "descripcion": "Gemas Faciales",
+    "imagen": "gemacara3.webp"
+  },
+  {
+    "id": 4,
+    "nombre": "Destellos Rosas",
+    "precio": 7500,
+    "descripcion": "Gemas Faciales",
+    "imagen": "gemacara4.webp"
+  },
+  {
+    "id": 5,
+    "nombre": "Corazones Dorados",
+    "precio": 4000,
+    "descripcion": "Gemas Corporales",
+    "imagen": "gemacorazon.webp"
+  },
+  {
+    "id": 6,
+    "nombre": "Corazones Verdes",
+    "precio": 4000,
+    "descripcion": "Gemas Corporales",
+    "imagen": "gemacorazon2.webp"
+  },
+  {
+    "id": 7,
+    "nombre": "Estrellitas y varios.",
+    "precio": 4000,
+    "descripcion": "Gemas Corporales",
+    "imagen": "gemaestrella.webp"
+  },
+  {
+    "id": 8,
+    "nombre": "Flores brillantes.",
+    "precio": 4000,
+    "descripcion": "Gemas Corporales",
+    "imagen": "gemaflor.webp"
   }
 ]
