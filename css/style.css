@@ -169,3 +169,6 @@ footer {
   color: black;
   background-color: rgba(224, 95, 250, 0.863);
 }
+.imgHoover:hover {
+  transform: scale(1.1); /* Cambia el tamaño al 110% en el hover */
+}

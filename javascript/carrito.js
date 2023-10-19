@@ -193,7 +193,7 @@ const botonCarrito = document.querySelector("section h2");
 const botonComprar = document.querySelector("#botonComprar");
 const botonVaciar = document.querySelector("#BotonVaciarCarrito");
 const botonFiltrar = document.querySelectorAll(".btnFiltrar");
-
+const imagen = document.getElementById(".imgHoover");
 // Instaciamos la clase Carrito
 const carrito = new Carrito();
 
@@ -223,7 +223,7 @@ function cargarProductos(productos) {
   // Recorremos producto por producto y lo dibujamos en el HTML
   for (const producto of productos) {
     divProductos.innerHTML += `<div class="card width15 margin10"">
-    <img src="./imagenes/${producto.imagen}" class="card-img-top" alt="...">
+    <img src="./imagenes/${producto.imagen}" class="card-img-top imgHoover" alt="...">
     <div class="card-body">
       <h5 class="card-title">${producto.nombre}</h5>
       <p class="card-text">Efectivo: $${producto.precio}</p>
@@ -288,4 +288,5 @@ botonVaciar.addEventListener("click", (event) => {
   event.preventDefault();
   carrito.vaciarCarrito();
 });
+
 //boton para agregar cantidad de productos
