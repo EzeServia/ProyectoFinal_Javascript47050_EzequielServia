@@ -173,6 +173,13 @@ class Carrito {
         const idProducto = Number(boton.dataset.id);
         // Llamo al método quitar pasándole el ID del producto
         this.quitar(idProducto);
+        Toastify({
+          text: `Eliminaste un Producto del carrito.`,
+          gravity: "bottom",
+          style: {
+            background: "linear-gradient(to right, #f72fe6, #5a04aa)",
+          },
+        }).showToast();
       });
     }
     // Actualizo los contadores del HTML
