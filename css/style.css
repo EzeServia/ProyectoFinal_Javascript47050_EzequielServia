@@ -176,7 +176,7 @@ footer {
   transform: scale(1.1); /* Cambia el tamaño al 110% en el hover */
 }
 
-@media (max-width: 425px) {
+@media (max-width: 500px) {
   .titulo {
     text-align: center;
     font-size: 35px;

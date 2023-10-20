@@ -284,7 +284,7 @@ botonComprar.addEventListener("click", (event) => {
   event.preventDefault();
   carrito.vaciarCarrito();
   Swal.fire({
-    position: "top-start",
+    position: "center",
     icon: "success",
     title: "Su compra ah sido REALIZADA!",
     showConfirmButton: false,
