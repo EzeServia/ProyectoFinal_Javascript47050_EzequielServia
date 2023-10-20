@@ -11,7 +11,7 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Document</title>
+    <title>Carrito - A Brillar mi amor</title>
   </head>
   <body class="fondo">
     <header class="font textoclaro flexhead">
@@ -27,18 +27,20 @@
         type="text"
         class="buscador"
         placeholder="Buscar productos..." />
-      <ul>
-        <li class="btnFiltrar botonSeleccionado" data-descripcion="Todos">
-          Todos
-        </li>
-        <li class="btnFiltrar" data-descripcion="Brillos">Brillos</li>
-        <li class="btnFiltrar" data-descripcion="Gemas Corporales">
-          Gemas Corporales
-        </li>
-        <li class="btnFiltrar" data-descripcion="Gemas Faciales">
-          Gemas Faciales
-        </li>
-      </ul>
+      <div class="centrar">
+        <ul class="heigh10">
+          <li class="btnFiltrar botonSeleccionado" data-descripcion="Todos">
+            Todos
+          </li>
+          <li class="btnFiltrar" data-descripcion="Brillos">Brillos</li>
+          <li class="btnFiltrar" data-descripcion="Gemas Corporales">
+            Gemas Corporales
+          </li>
+          <li class="btnFiltrar" data-descripcion="Gemas Faciales">
+            Gemas Faciales
+          </li>
+        </ul>
+      </div>
       <div id="productos" class="grid margin20">
         <!-- Acá van a ir todos los productos cargados en la base de datos (catálogo) -->
       </div>
@@ -68,7 +70,7 @@
         /></a>
       </div>
       <div class="flex">
-        <p>
+        <p class="font">
           No dejes de visitar nuestras Redes sociales para mucho contenido
           brillante!
         </p>
