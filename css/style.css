@@ -2,6 +2,11 @@
 .font {
   font-family: "Dancing Script", cursive;
 }
+.font2 {
+  color: black;
+  font-size: 26px;
+}
+
 .textoclaro {
   color: white;
   text-shadow: 5px 5px black;
@@ -175,7 +180,12 @@ footer {
 .imgHoover:hover {
   transform: scale(1.1); /* Cambia el tamaño al 110% en el hover */
 }
-
+.heigh50 {
+  height: 50px;
+}
+.contenedor {
+  opacity: 0.9;
+}
 @media (max-width: 500px) {
   .titulo {
     text-align: center;

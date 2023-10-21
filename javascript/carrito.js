@@ -17,8 +17,8 @@ class gemas {
     this.imagen = imagen;
   }
 }
-// Clase para que simula la base de datos del e-commerce, acá van a estar
-// todos los productos de nuestro catálogo
+// Clase que simula la base de datos del e-commerce, acá van a estar
+// todos los productos del catálogo
 class BaseDeDatos {
   constructor() {
     // Array para el catálogo
@@ -55,6 +55,7 @@ class BaseDeDatos {
       producto.nombre.toLowerCase().includes(palabra.toLowerCase())
     );
   }
+  // Nos devuelve un array de los productos segun su descripción.
   registrosPorDescripcion(descripcion) {
     return this.productos.filter(
       (producto) => producto.descripcion == descripcion
@@ -71,7 +72,7 @@ class Carrito {
     this.carrito = carritoStorage || [];
     this.total = 0; // Suma total de los precios de todos los productos
     this.cantidadProductos = 0; // La cantidad de productos que tenemos en el carrito
-    // Llamo a listar apenas de instancia el carrito para aplicar lo que
+    // Llamo a listar apenas se instancia el carrito para aplicar lo que
     // hay en el storage (en caso de que haya algo)
     this.listar();
   }
@@ -115,6 +116,7 @@ class Carrito {
     // Muestro los productos en el HTML
     this.listar();
   }
+  // Función para vaciar el Carrito de compras.
   vaciarCarrito() {
     this.total = 0;
     this.cantidadProductos = 0;
@@ -137,6 +139,7 @@ class Carrito {
         <div class="productoCarrito ">
         
             <h3>${producto.nombre}</h3>
+            <img src="./imagenes/${producto.imagen}" class= "width50 ">
             <p>$${producto.precio}</p>
             <img class="flext" src="./imagenes/tarjeta.png"><p class="fuente flext margin10" >Llevalo en 3 cuotas sin interés de $${(
               producto.precio / 3
@@ -175,7 +178,8 @@ class Carrito {
         this.quitar(idProducto);
         Toastify({
           text: `Eliminaste un Producto del carrito.`,
-          gravity: "bottom",
+          gravity: "top",
+          position: "left",
           style: {
             background: "linear-gradient(to right, #f72fe6, #5a04aa)",
           },
@@ -200,10 +204,10 @@ const botonCarrito = document.querySelector("section h2");
 const botonComprar = document.querySelector("#botonComprar");
 const botonVaciar = document.querySelector("#BotonVaciarCarrito");
 const botonFiltrar = document.querySelectorAll(".btnFiltrar");
-const imagen = document.getElementById(".imgHoover");
+
 // Instaciamos la clase Carrito
 const carrito = new Carrito();
-
+// Recorre todos los botones y le agrega o saca clases de estilo a la lista que se encarga de filtrar por DESCRIPCIÓN.
 botonFiltrar.forEach((boton) => {
   boton.addEventListener("click", () => {
     const descripcion = boton.dataset.descripcion;
@@ -229,8 +233,9 @@ function cargarProductos(productos) {
   divProductos.innerHTML = "";
   // Recorremos producto por producto y lo dibujamos en el HTML
   for (const producto of productos) {
-    divProductos.innerHTML += `<div class="card width15 margin10"">
-    <img src="./imagenes/${producto.imagen}" class="card-img-top imgHoover" alt="...">
+    divProductos.innerHTML += `<div class="card width15 margin10 ">
+    <img  src="./imagenes/${producto.imagen}" class="card-img-top imgHoover" alt="Imagen de un producto de el catálogo.">
+    
     <div class="card-body">
       <h5 class="card-title">${producto.nombre}</h5>
       <p class="card-text">Efectivo: $${producto.precio}</p>
@@ -259,6 +264,7 @@ function cargarProductos(productos) {
       Toastify({
         text: `Agregaste brillo ${producto.nombre} al carrito.`,
         gravity: "bottom",
+        position: "left",
         style: {
           background: "linear-gradient(to right, #f72fe6, #5a04aa)",
         },
@@ -295,5 +301,3 @@ botonVaciar.addEventListener("click", (event) => {
   event.preventDefault();
   carrito.vaciarCarrito();
 });
-
-//boton para agregar cantidad de productos
